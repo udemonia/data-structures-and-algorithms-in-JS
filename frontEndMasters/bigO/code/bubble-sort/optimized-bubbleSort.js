@@ -8,8 +8,8 @@ function bubbleSort(nums) {
     do {
         swapped = false
         iterations ++
-
-        for (let i = 0; i < nums.length; i++) {
+        let question = nums.length - iterations
+        for (let i = 0; i < nums.length - iterations; i++) {
 
             // if the left element is > than the right element
             if (nums[i] > nums[i + 1]) {
@@ -34,13 +34,3 @@ const result = bubbleSort(array)
 
 console.log(result.nums)
 console.log(`Completed in ${result.iterations} iterations`)
-
-//*  💡 $node bubble-sort.js
-//*  [
-//*     1,  2,  2,  3,  3,  3, 3, 4,  4,
-//*     4,  4,  4,  4,  4,  4, 5, 5,  5,
-//*     6,  6,  6,  6,  7,  7, 8, 8, 45,
-//*    65, 66, 67, 78, 78, 78
-//*  ]
-
-//* Completed in 24 iterations
