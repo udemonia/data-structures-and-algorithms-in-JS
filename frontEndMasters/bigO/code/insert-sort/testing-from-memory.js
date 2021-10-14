@@ -36,3 +36,22 @@ console.log(insertSort(unsortedArray))
 *       [ 5, 10, 20 ]
 */
 
+/*
+?   const unsortedArray = [20,10,5,0]
+
+*       Numbers to Check: 20,10
+*       need to swap = true 😀
+*       Numbers to Check: 20,5
+*       need to swap = true 😀
+*       Numbers to Check: 10,5
+*       need to swap = true 😀
+*       Numbers to Check: 20,0
+*       need to swap = true 😀
+*       Numbers to Check: 10,0
+*       need to swap = true 😀
+*       Numbers to Check: 5,0
+*       need to swap = true 😀
+*       [ 0, 5, 10, 20 ]
+
+
+*/
