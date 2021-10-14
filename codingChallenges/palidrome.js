@@ -12,3 +12,16 @@ const isPalindrome = (x) => {
 console.log(isPalindrome(121))
 console.log(isPalindrome(345))
 console.log(isPalindrome(454))
+
+
+/*
+
+?   Success
+*   Details 
+--------------
+
+*   Runtime: 196 ms, faster than 56.27% of JavaScript online submissions for Palindrome Number.
+*   Memory Usage: 48 MB, less than 79.57% of JavaScript online submissions for Palindrome Number.
+*   Next challenges:
+
+*/
