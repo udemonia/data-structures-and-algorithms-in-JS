@@ -37,9 +37,13 @@ console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])) //! 4.
 
 function diffArraySet(arr1, arr2) {
 
+    //? create a set from the two arrays....
     const union = new Set([...arr1, ...arr2]) //! Set(5) { 1, 2, 3, 5, 4 }
  
     const symmetricDifference = [];
+    
+    //? iterate through union and see if the element is in one array and not in the other...
+    //? if yes - push to our return empty array...
     for (const currentElement of union) {
         if (arr1.includes(currentElement) && !arr2.includes(currentElement)) {
             symmetricDifference.push(currentElement);
