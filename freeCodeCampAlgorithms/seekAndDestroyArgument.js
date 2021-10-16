@@ -5,11 +5,21 @@ function destroyer(arr, ...args) {
     //! loop through the array - removing argsArraySpread values....
 
     const filteredArray = [];
-    for (let index = 0; index < arr.length; index++) {
-        if (!argsArraySpread.includes(arr[index])) {
-            filteredArray.push(arr[index])
+
+    for (const el of arr) {
+        if (!argsArraySpread.includes(el)) {
+            filteredArray.push(el)
         }
     }
+
+/*
+    *   for (let index = 0; index < arr.length; index++) {
+    *       if (!argsArraySpread.includes(arr[index])) {
+    *           filteredArray.push(arr[index])
+    *       }
+    *   }
+*/
+
     return filteredArray
 
   }

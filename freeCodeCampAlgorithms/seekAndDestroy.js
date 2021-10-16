@@ -17,18 +17,19 @@
 //! in the destroyer call, we'd want to remove 2 and 3 from the first argument's array...
 
 function destroyer(arr, ...args) {
+
     const filterCheck = [...args];
 
-    const filteredArray = arr.filter((el) => {
-        if (filterCheck.indexOf(el) === -1) {
-            return el
-        }
-
-    })
-    return filteredArray
+    return arr.filter((el) => filterCheck.indexOf(el) === -1)
 
   }
 
-  console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+console.log('Easier to Read...',destroyer([1, 2, 3, 1, 2, 3], 2, 3))
   
-  destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+
+function destroyerOneLine(arr, ...args) {
+    return arr.filter((el) => [...args].indexOf(el) === -1)
+  }
+
+console.log('One Line',destroyerOneLine([1, 2, 3, 1, 2, 3], 2, 3))
