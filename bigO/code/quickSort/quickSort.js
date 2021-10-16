@@ -15,7 +15,6 @@ const quickSort = (array) => {
     for (const el of array.slice(0, array.length -1)) {
         el < pivotNumber ? leftSideArray.push(el) : rightSideArray.push(el);
     }
-
     //? we need to handle 3 cases
     if (leftSideArray.length > 0 && rightSideArray.length > 0) {
         return [...quickSort(leftSideArray), pivotNumber, ...quickSort(rightSideArray)]

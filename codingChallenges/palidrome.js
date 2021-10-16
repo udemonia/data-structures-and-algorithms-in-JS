@@ -5,13 +5,13 @@
 
 const isPalindrome = (x) => {
     //* we need to reverse x and see if x reversed matches x
-    return x.toString().split('').reverse().join('') === x.toString()
+    return x.toString().split('').reverse().join('') === x.toString();
     
 };
 
-console.log(isPalindrome(121))
-console.log(isPalindrome(345))
-console.log(isPalindrome(454))
+console.log(isPalindrome(121));
+console.log(isPalindrome(345));
+console.log(isPalindrome(454));
 
 
 /*
@@ -25,3 +25,5 @@ console.log(isPalindrome(454))
 *   Next challenges:
 
 */
+
+module.exports = isPalindrome;
