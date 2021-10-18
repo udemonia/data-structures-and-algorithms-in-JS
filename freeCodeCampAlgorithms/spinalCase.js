@@ -3,25 +3,50 @@
 *   Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
 */
 
+
+//*-----------------------------------------
+//*   Rules
+//*   1. All Characters are lower case
+//*   2. _ or ' ' turn into -
+//*   3. Capital Case starts a new word...........
+//?         this one is hard... Capital Case always determines the start of a new word but not all words start with capitals
+
+
+let examplePhrase = "helloISthe_bestPhraseTo_hear_in_theMorning"
+
 function spinalCase(str) {
-    return str.toLowerCase().split(' ').join('-')
+  const words = [];
+  let word = '';
+
+  //Loop over the entire string... 
+  for (const c of str){
+    // underscore and spaces start new words
+    if (c === ' ' || c === '_') {
+      word.push(word);
+      word = '';
+    } else if (c >= 'A' && c <= 'Z' && !word.length) {
+      // each character value has a ASCII value associated with it....
+      word = c.toLowerCase();
+    }  else if (c >= 'A' && c <= 'Z' && word.length) {
+        //! upper case where word is not empty.... for instance thisIs - check is for I in Is
+        words.push(word);
+        // reset the word, w/ the current character to Lower case
+        word = c.toLowerCase();
+    }
+  }
   }
   
-const result = spinalCase('This Is Spinal Tap');
-
-console.log(result)
+const a = spinalCase('This Is Spinal Tap');
 
 
 
-
-12345
-function spinalCase(str) {
+function spinalCaseExample(str) {
     return str.toLowerCase().split(' ').join('-');
 }
 
-spinalCase('This Is Spinal Tap');
+const b = spinalCase('This Is Spinal Tap');
 // running tests
-spinalCase("thisIsSpinalTap") //!            should return the string this-is-spinal-tap.
-spinalCase("The_Andy_Griffith_Show") //!    should return the string the-andy-griffith-show.
-spinalCase("AllThe-small Things") //!       should return the string all-the-small-things.
+const c = spinalCase("thisIsSpinalTap") //!            should return the string this-is-spinal-tap.
+const d = spinalCase("The_Andy_Griffith_Show") //!    should return the string the-andy-griffith-show.
+const e = spinalCase("AllThe-small Things") //!       should return the string all-the-small-things.
 // tests completed
