@@ -32,6 +32,8 @@ function spinalCase(str) {
         words.push(word);
         // reset the word, w/ the current character to Lower case
         word = c.toLowerCase();
+    } else {
+      // we know we're not dealing with an upper case
     }
   }
   }

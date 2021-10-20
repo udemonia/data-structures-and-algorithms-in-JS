@@ -9,3 +9,6 @@
 *   Insert      O(1)        O(n)
 *   Delete      O(1)        O(n)
 */
+
+//! We need to try and avoid collisions
+
