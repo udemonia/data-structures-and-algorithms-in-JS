@@ -14,7 +14,7 @@ function maxChar(str) {
         char[character] === undefined ? char[character] = 1 : char[character] ++
     }
     for (let key in char) {
-        if (char[key] > max) {
+        if (char[key] > max && key !== ' ') {
             max = char[key];
             maxChar = key
         }
@@ -22,6 +22,6 @@ function maxChar(str) {
     return maxChar
 }
 
-console.log(maxChar('brandon is the bestist!!!!'))
+console.log(maxChar('braelynn is a hot mess right now'))
 
 module.exports = maxChar;

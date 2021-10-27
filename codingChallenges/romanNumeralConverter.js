@@ -26,6 +26,7 @@
 */
 
 const romanNumeralConvertor = (romanNumeral) => {
+
     let romanNumeralTable = {
         I: 1,
         V: 5,
@@ -35,23 +36,18 @@ const romanNumeralConvertor = (romanNumeral) => {
         D: 500,
         M: 1000
     }
-    
     let result = 0;
-
     for (let i = 0; i < romanNumeral.length; i++) {
-
-        //* if the next roman numeral is larger, then we know we have to subtract this number
-        if (romanNumeralTable[romanNumeral[i]] < romanNumeralTable[romanNumeral[i+1]]) {
-            result-=romanNumeralTable[romanNumeral[i]]
-        } 
-        //otherwise, add like normal. 
-        else {
-            result+=romanNumeralTable[romanNumeral[i]]
-        }
+        console.log(`Here is the Table Look Up Value ${romanNumeralTable[romanNumeral[i]]}`);
+        romanNumeralTable[romanNumeral[i]] < romanNumeralTable[romanNumeral[i+1]] 
+            ? result-=romanNumeralTable[romanNumeral[i]] 
+            : result+=romanNumeralTable[romanNumeral[i]]
     }
     return result
 }
 
 console.log(romanNumeralConvertor('VIII'))
+console.log(romanNumeralConvertor('XXL'))
+console.log(romanNumeralConvertor('CXXLII'))
 
 module.exports = romanNumeralConvertor;
