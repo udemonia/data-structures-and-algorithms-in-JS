@@ -1,34 +1,33 @@
-
-
-
-const anagrams = (str1, str2) => {
-
-}
-
-//! Function to get produce a return map of characters and their count;
-const characterMap = (str) => {
-    const returnMap = {};
-
-    for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
-        returnMap[char] === undefined ? returnMap[char] = 1 : returnMap[char]++;
+// Write some code to take in a string and an array of strings, checking if they're anagrams
+const characterCount = (string) => {
+    const returnObject = {};
+    for (const letter of string) {
+        returnObject[letter] === undefined ? returnObject[letter] = 1 : returnObject[letter] ++;
     }
+    return returnObject
+ }
 
-    return returnMap;
-}
 
-const isAnagram = (str1, str2) => {
-    const map1 = characterMap(str1);
-    const map2 = characterMap(str2);
+ const isAnagram = (string, array) => {
+     const matchingWords = [];
+     const stringCount = characterCount(string);
 
-    if (Object.key[map1].length !== Object.keys(map2).length) {
-        return false
-    }
+     array.forEach((word) => {
+         let wordFromArrayCharCount = characterCount(word);
 
-    for (let key in map1) {
-        if (map1[key] !== map2[key]) {
-            return false
-        }
-    }
-    return true
-}
+         for (const key in wordFromArrayCharCount) {
+             if (stringCount[key] !== wordFromArrayCharCount[key]) {
+                 return false;
+             } else {
+                 matchingWords.push(word);
+             }
+         }
+         return matchingWords;
+     })
+ }
 
+
+test = isAnagram('sport', ['ports', 'strop', 'brandon']);
+
+
+console.log(test);
