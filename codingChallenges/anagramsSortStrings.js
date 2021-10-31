@@ -20,4 +20,4 @@ const findAnagrams = (string, array) => {
 
 const anagramsOfSport = findAnagrams('sport', ['ports', 'blahblah', 'fffff', 'storp']);
 
-console.log(anagramsOfSport);
+module.exports = anagramsOfSport;

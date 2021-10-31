@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 
 //* The TRICK here is to subtract if i is less than i + 1 and add if its not
 
@@ -26,28 +27,27 @@
 */
 
 const romanNumeralConvertor = (romanNumeral) => {
+  const romanNumeralTable = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+  let result = 0;
+  for (let i = 0; i < romanNumeral.length; i++) {
+    console.log(`Here is the Table Look Up Value ${romanNumeralTable[romanNumeral[i]]}`);
+    // eslint-disable-next-line no-unused-expressions
+    romanNumeralTable[romanNumeral[i]] < romanNumeralTable[romanNumeral[i + 1]]
+      ? result -= romanNumeralTable[romanNumeral[i]] : result += romanNumeralTable[romanNumeral[i]];
+  }
+  return result;
+};
 
-    let romanNumeralTable = {
-        I: 1,
-        V: 5,
-        X: 10,
-        L: 50,
-        C: 100,
-        D: 500,
-        M: 1000
-    }
-    let result = 0;
-    for (let i = 0; i < romanNumeral.length; i++) {
-        console.log(`Here is the Table Look Up Value ${romanNumeralTable[romanNumeral[i]]}`);
-        romanNumeralTable[romanNumeral[i]] < romanNumeralTable[romanNumeral[i+1]] 
-            ? result-=romanNumeralTable[romanNumeral[i]] 
-            : result+=romanNumeralTable[romanNumeral[i]]
-    }
-    return result
-}
-
-console.log(romanNumeralConvertor('VIII'))
-console.log(romanNumeralConvertor('XXL'))
-console.log(romanNumeralConvertor('CXXLII'))
+console.log(romanNumeralConvertor('VIII'));
+console.log(romanNumeralConvertor('XXL'));
+console.log(romanNumeralConvertor('CXXLII'));
 
 module.exports = romanNumeralConvertor;

@@ -17,6 +17,42 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+
+/*
+
+?   J, Row ---------->
+
+*   ________________________
+*   |  #   |   _   |   _   | 
+*   ________________________
+*   |  #   |   #   |   _   | 
+*   ________________________
+*   |  #   |   #   |   #   | 
+*   ________________________
+
+
+! THINK OF THIS IN TERMS OF COLUMNS, ROWS
+! FIND THE PATTERNS
+
+* if the current column we're looking at is equal to or less than 
+
+*/
+
+function steps(n) {
+    for (let row = 0; row < n; row ++) {
+        let stair = '';
+        for (let column = 0; column < n; column ++) {
+            if (column <= row) {
+                stair += '#'
+            } else {
+                stair += ' '
+            }
+        }
+        console.log(stair)
+
+    }
+}
+
+steps(5)
 
 module.exports = steps;

@@ -1,13 +1,16 @@
+/* eslint-disable spaced-comment */
+/* eslint-disable max-len */
 //? 
 
+// eslint-disable-next-line spaced-comment
 //? JS Interviews often ask you to implement a queue - even though the functionality of a queue is a subset of the functionality of an array.
 
+// eslint-disable-next-line spaced-comment
 //? A Nice intro to Data Structures
 
 //? Waiting in line for a train, or a ticketing counter - FIFO
 
 //? First in, first out - there is no skipping or cutting in line.
-
 
 /*
 
@@ -22,20 +25,21 @@
 //!!! We can use Array .push and .upshift to remove form the end and add to the beginning
 
 class Queue {
-    constructor() {
-        this.queuedData = [];
-    }
+  constructor() {
+    this.queuedData = [];
+  }
 
-    enqueue(record) {
-        this.queuedData.upshift(record)
-    }
+  enqueue(record) {
+    this.queuedData.upshift(record)
+  }
 
-    dequeued() {
-        if (this.queuedData.length === 0) {
-            return null;
-        }
-        return this.queuedData.pop();
+  dequeued() {
+    if (this.queuedData.length === 0) {
+      return null;
     }
+    return this.queuedData.pop();
+  }
 }
 
+// eslint-disable-next-line no-unused-vars
 const Q = new Queue();
