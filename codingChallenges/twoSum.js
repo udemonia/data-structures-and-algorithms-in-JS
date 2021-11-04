@@ -23,6 +23,8 @@ let twoSum = function(nums, target) {
   return result;
 };
 
+console.log(twoSum([2,7,11,15], 9))
+
 /* 
 !   Runtime: 116 ms, faster than 44.73% of JavaScript online submissions for Two Sum.
 !   Memory Usage: 39.7 MB, less than 59.92% of JavaScript online submissions for Two Sum.
