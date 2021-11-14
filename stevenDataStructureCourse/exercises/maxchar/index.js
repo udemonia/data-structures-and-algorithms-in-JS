@@ -24,4 +24,3 @@ function maxChar(str) {
 
 console.log(maxChar('braelynn is a hot mess right now'))
 
-module.exports = maxChar;
