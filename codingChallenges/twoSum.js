@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 
 /*
 ?   Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -29,3 +28,33 @@ console.log(twoSum([2,7,11,15], 9))
 !   Runtime: 116 ms, faster than 44.73% of JavaScript online submissions for Two Sum.
 !   Memory Usage: 39.7 MB, less than 59.92% of JavaScript online submissions for Two Sum.
 */
+
+const twoSumWindow = (array, target) => {
+    let leftPointer = 0;
+    let rightPointer = array.length - 1;
+    
+    while (leftPointer < rightPointer) {
+        let currentValue = array[leftPointer] + array[rightPointer];
+        if (currentValue === target){
+            return [array[leftPointer], array[rightPointer]];
+        }
+        else if (currentValue < target) {
+            leftPointer ++
+        } else {
+            rightPointer --
+        }
+    }
+    return [-1,-1]
+}
+
+
+console.log(twoSumWindow([1,2,3,4,5,7], 9));
+
+
+
+
+
+
+
+
+
