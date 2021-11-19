@@ -1,8 +1,3 @@
-
-
-// take in two string, return true if its an anagram
-
-
 const isAnagram = (str, str2) => {
     // fail fast
     if (str.length !== str2.length) {
